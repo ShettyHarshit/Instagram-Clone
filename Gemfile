@@ -6,6 +6,7 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 #Hamre gems
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.7'
+gem "paperclip", "~> 4.3"
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
