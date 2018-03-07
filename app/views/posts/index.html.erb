@@ -1,12 +1,22 @@
 <div class="container">
     <div class="row">
-    <div class="col-lg-12 text-center">
-        <h1 class="mt-5">Namma Instagram</h1>
-        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
-        <ul class="list-unstyled">
-        <li>Bootstrap 4.0.0</li>
-        <li>jQuery 3.3.0</li>
-        </ul>
+        <div class="col-lg-12 text-center">
+            <h1 class="mt-5">Namma Instagram</h1>
+            <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+            <ul class="list-unstyled">
+                <li>Bootstrap 4.0.0</li>
+                <li>jQuery 3.3.0</li>
+            </ul>
+        </div>
     </div>
+    
+    <% @posts.each do |x| %>
+    <div class="white">
+        <h1>
+            <%= x.description %>
+        </h1>
+        <%= image_tag(x.image.url(:medium))%>
+        
     </div>
+    <% end %>
 </div>
