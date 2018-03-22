@@ -48,8 +48,14 @@
 }
 
 .post-user{
-  font-weight: 600 !important;
-  
+  font-weight: 600 !important; 
+}
+
+.post-user-info{
+  height: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  text-align: left;
 }
 
 .App-title {
