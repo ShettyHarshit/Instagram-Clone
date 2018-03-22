@@ -47,7 +47,7 @@ class Post extends Component {
       <div className="post-wrap">
       <img src={post.url} />
       <h1 className="post-likes" key={post.id}>{post.likes} Likes</h1>
-      <p className="post-title">{post.description}</p>
+      <p className="post-title"><span className="post-user">theharshitshetty </span>{post.description}</p>
       </div>
       </div>;
     }))

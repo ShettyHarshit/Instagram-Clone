@@ -47,6 +47,9 @@ padding: 5px;
   text-align: left;
 }
 
+.post-user{
+  font-weight: 700 !important;
+}
 
 .App-title {
   font-size: 1.5em;
