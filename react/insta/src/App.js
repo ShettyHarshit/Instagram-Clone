@@ -43,10 +43,12 @@ class Post extends Component {
 
   render() {
     var postList = _.map(this.x, (function (post) {
-      return <div>
+      return <div className="post-body">
+      <div className="post-wrap">
       <img src={post.url} />
-      <h1 key={post.id}>{post.description}</h1>
+      <h1 className="post-title" key={post.id}>{post.description}</h1>
       <p>{post.likes} Likes</p>
+      </div>
       </div>;
     }))
     return this.state.loading
