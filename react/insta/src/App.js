@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
+import insta from './insta-logo.png';
 import _ from 'lodash';
 import './App.css';
 
@@ -62,7 +63,7 @@ class InstaHeader extends Component {
   state = {}
   render() { 
     return <div className="insta-header">
-    <img />
+    <img className="insta-logo" src={insta} />
     </div>;
   }
 }
