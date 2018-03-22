@@ -50,7 +50,7 @@ class Post extends Component {
             </div>
             <div className="w90">
               <div className="post-user-name">theharshitshetty </div>
-              <div className="post-user-name">In the Terminal </div>
+              <div className="post-user-name">{post.location} </div>
             </div>
           </div>
           <div className="post-wrap">
@@ -95,7 +95,6 @@ class App extends Component {
           <h1 className="App-title">Namma Insta</h1>
         </header> */}
         <p className="App-intro">
-          {/* To get started, edit <code>src/App.js</code> and save to reload. */}
         </p>
         <Post />
       </div>
