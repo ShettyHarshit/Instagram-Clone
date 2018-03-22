@@ -53,7 +53,8 @@
 
 .post-user-name{
   font-weight: 600 !important; 
-  font-size: 10px;
+  font-size: 13px;
+  padding: 1px;
   height: 50%;
 }
 
@@ -62,6 +63,7 @@
   padding: 20px;
   border-bottom: 1px solid black;
   text-align: left;
+  display: flex;
 }
 
 .post-user-avatar{
@@ -78,13 +80,13 @@
 }
 
 .w10{
-  /* width: 20%; */
-  display: inline;
+  width: 12%;
+  /* display: inline; */
 }
 
 .w90{
-  display: inline;
-  width: 80%;
+  /* display: inline; */
+  width: 70%;
 }
 
 @keyframes App-logo-spin {

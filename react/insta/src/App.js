@@ -49,9 +49,8 @@ class Post extends Component {
               <img className="post-user-avatar" src="https://instagram.fmaa1-2.fna.fbcdn.net/vp/106ef4c34875eae25833b59bc9754614/5B360E03/t51.2885-19/s150x150/29402975_2106004819686825_2009629057657864192_n.jpg" />
             </div>
             <div className="w90">
-              <span className="post-user-name">theharshitshetty </span>
-              <br />
-              <span className="post-user-name">In the Terminal </span>
+              <div className="post-user-name">theharshitshetty </div>
+              <div className="post-user-name">In the Terminal </div>
             </div>
           </div>
           <div className="post-wrap">
