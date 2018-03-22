@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
 .App {
   text-align: center;
 }
@@ -34,8 +36,17 @@ padding: 5px;
 }
 
 .post-title{
-  font-size: 16px;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
 }
+
+.post-likes{
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+}
+
 
 .App-title {
   font-size: 1.5em;

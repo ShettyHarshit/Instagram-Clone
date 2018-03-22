@@ -46,8 +46,8 @@ class Post extends Component {
       return <div className="post-body">
       <div className="post-wrap">
       <img src={post.url} />
-      <h1 className="post-title" key={post.id}>{post.description}</h1>
-      <p>{post.likes} Likes</p>
+      <h1 className="post-likes" key={post.id}>{post.likes} Likes</h1>
+      <p className="post-title">{post.description}</p>
       </div>
       </div>;
     }))
@@ -56,7 +56,7 @@ class Post extends Component {
       : (
         <div>
           <div>{postList}</div>
-        {JSON.stringify(this.x)}
+        {/* {JSON.stringify(this.x)} */}
         </div>)
   }
 }
