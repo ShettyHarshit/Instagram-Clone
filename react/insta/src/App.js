@@ -45,7 +45,14 @@ class Post extends Component {
     var postList = _.map(this.x, (function (post) {
       return <div className="post-body">
           <div className="post-user-info">
-            <span className="post-user">theharshitshetty </span>
+            <div className="w10">
+              <img className="post-user-avatar" src="https://instagram.fmaa1-2.fna.fbcdn.net/vp/106ef4c34875eae25833b59bc9754614/5B360E03/t51.2885-19/s150x150/29402975_2106004819686825_2009629057657864192_n.jpg" />
+            </div>
+            <div className="w90">
+              <span className="post-user-name">theharshitshetty </span>
+              <br />
+              <span className="post-user-name">In the Terminal </span>
+            </div>
           </div>
           <div className="post-wrap">
             <img src={post.url} />

@@ -51,11 +51,22 @@
   font-weight: 600 !important; 
 }
 
+.post-user-name{
+  font-weight: 600 !important; 
+  font-size: 10px;
+  height: 50%;
+}
+
 .post-user-info{
-  height: 20px;
+  height: 40px;
   padding: 20px;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   text-align: left;
+}
+
+.post-user-avatar{
+  border-radius: 50%;
+  width: 40px;
 }
 
 .App-title {
@@ -64,6 +75,16 @@
 
 .App-intro {
   font-size: large;
+}
+
+.w10{
+  /* width: 20%; */
+  display: inline;
+}
+
+.w90{
+  display: inline;
+  width: 80%;
 }
 
 @keyframes App-logo-spin {
