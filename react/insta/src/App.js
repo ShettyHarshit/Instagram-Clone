@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './logo.png';
 import _ from 'lodash';
 import './App.css';
 
@@ -27,13 +27,12 @@ class Post extends Component {
       .then(res => {
         // this.x = res
         var t = _.get(res, "data")
-        var desc = _.map(t, function (o) {
-          return o.description
-        })
+        // var desc = _.map(t, function (o) {
+        //   return o.description
+        // })
         this.x = t
         this.setState({loading: false})
         console.log("Tera Nahi Kata")
-        console.log(desc)
         return t;
       }).catch(err => {
         this.setState({ loading: false })
@@ -42,12 +41,14 @@ class Post extends Component {
   }
 
   render() {
+    var postList = _.map(this.x, (function (post) {
+      return <h1 key={post.id}>{post.description}</h1>;
+    }))
     return this.state.loading
       ? <center>Loading</center>
       : (
         <div>
-          <h1>Hello</h1>
-          <h1>{JSON.stringify(this.x.description)}</h1>
+          <div>{postList}</div>
         {JSON.stringify(this.x)}
         </div>)
   }
@@ -59,7 +60,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Namma Insta</h1>
         </header>
         <p className="App-intro">
