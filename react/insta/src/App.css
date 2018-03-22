@@ -18,7 +18,11 @@
   background-color: #fff;
   color: black;
   height: 52px;
-  padding: 10px;
+  padding: 10px 20% 10px 20%;
+}
+
+.insta-logo{
+  float: left;
 }
 
 .App-title {
