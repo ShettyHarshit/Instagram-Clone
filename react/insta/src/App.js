@@ -21,7 +21,7 @@ class Post extends Component {
     this.fetchData();
   }
 
-  fetchData = (url ="http://localhost:3000") => {
+  fetchData = (url ="http://localhost:3001") => {
     this.setState({loading: true})
     return fetch(url)
       .then(res => res.json())
