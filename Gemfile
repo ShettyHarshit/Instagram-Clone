@@ -9,7 +9,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem "paperclip", "~> 4.3"
 #Hamre social gems
 gem 'acts_as_votable', '~> 0.11.1'
-gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
+gem 'acts_as_follower'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
