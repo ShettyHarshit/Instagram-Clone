@@ -3,4 +3,5 @@ class Post < ApplicationRecord
                     # :path => ":/:attachment/:id.:extension"
                     # :url  => "/:attachment/:id.:extension"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/    
+  acts_as_votable
 end
