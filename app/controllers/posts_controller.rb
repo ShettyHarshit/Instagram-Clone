@@ -4,9 +4,7 @@ class PostsController < ApplicationController
   end
   
   def index
-    # @posts = Post.all
-    posts = Post.all
-    render json: {data:posts}, status: :ok
+    @posts = Post.all
   end
   
   def show
