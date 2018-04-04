@@ -8,6 +8,7 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem "paperclip", "~> 4.3"
 gem 'simple_token_authentication', '~> 1.0'
+gem 'jwt'
 #Hamre social gems
 gem 'acts_as_votable', '~> 0.11.1'
 gem 'acts_as_follower'
