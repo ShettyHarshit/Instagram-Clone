@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       put '/like', to: "posts#upvote"
       put '/dislike', to: "posts#downvote"
     end
+    get 'users/me', to: "users#current"
     resources :users
   end
   post 'authenticate', to: 'authentication#authenticate'
