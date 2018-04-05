@@ -13,5 +13,19 @@ module Api
                 render json: @post
             end
         end
+        
+        def upvote 
+            @post = Post.find(params[:post_id])
+            @post.upvote_by current_user
+            likes = @post.weighted_score
+            render json: likes, status: :ok
+        end  
+        
+        def downvote
+            @post = Post.find(params[:post_id])
+            @post.downvote_by current_user
+            likes = @post.weighted_score
+            render json: likes, status: :ok
+        end
     end
 end

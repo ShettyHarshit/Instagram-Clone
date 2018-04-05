@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :posts
   namespace 'api' do
-    resources :posts
+    resources :posts do
+      put '/like', to: "posts#upvote"
+      put '/dislike', to: "posts#downvote"
+    end
     resources :users
   end
   post 'authenticate', to: 'authentication#authenticate'
