@@ -3,7 +3,7 @@
 ## Todo List for Back-end
 
 - [x] Token Based Auth
-- [ ] Likes in API call
+- [x] Likes in API call
 - [ ] Seperate API for users
 - [x] API call for current user
 - [ ] Merge User and Profile Models
