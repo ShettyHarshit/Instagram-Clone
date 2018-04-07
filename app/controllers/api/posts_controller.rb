@@ -41,6 +41,7 @@ module Api
             @post = Post.find(params[:post_id])
             @post.liked_by current_user
             @post.likes = @post.weighted_score
+            @post.update_attribute(:likes, @post.likes)
             render json: @post.likes, status: :ok
         end  
         
@@ -48,6 +49,7 @@ module Api
             @post = Post.find(params[:post_id])
             @post.unliked_by current_user
             @post.likes = @post.weighted_score
+            @post.update_attribute(:likes, @post.likes)
             render json: @post.likes, status: :ok
         end
         
