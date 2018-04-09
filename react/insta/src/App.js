@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.png';
-import insta from './insta-logo.png';
+import InstaHeader from "./Components/header";
+import Profile from "./Components/users";
 import _ from 'lodash';
 import './App.css';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import Login from './Components/login';
 
 // fetch("http://localhost:3000")
 //   .then(res => res.json())
@@ -50,7 +51,7 @@ render() {
     return <div className="post-body">
     <div className="post-user-info">
     <div className="w10">
-    <img className="post-user-avatar" src="https://instagram.fmaa1-2.fna.fbcdn.net/vp/106ef4c34875eae25833b59bc9754614/5B360E03/t51.2885-19/s150x150/29402975_2106004819686825_2009629057657864192_n.jpg" />
+    <img className="post-user-avatar" src="https://instagram.fmaa1-2.fna.fbcdn.net/vp/106ef4c34875eae25833b59bc9754614/5B360E03/t51.2885-19/s150x150/29402975_2106004819686825_2009629057657864192_n.jpg" alt="User" />
     </div>
     <div className="w90">
     <div className="post-user-name">theharshitshetty </div>
@@ -58,7 +59,7 @@ render() {
     </div>
     </div>
     <div className="post-wrap">
-    <img src={post.url} />
+    <img src={post.url} alt={post.description} />
     <h1 className="post-likes" key={post.id}>
     {post.likes} Likes
     </h1>
@@ -79,28 +80,6 @@ render() {
   }
 }
 
-class InstaHeader extends Component {
-  state = {}
-  render() { 
-    return <div className="insta-header">
-    <img className="insta-logo" src={insta} />
-    </div>;
-  }
-}
-
-class Profile extends Component {
-  state = {}
-  render() { 
-    return <div>My Profile
-    <p>
-    x followers y following z posts
-    </p>
-    </div>;
-  }
-}
-
-
-
 class App extends Component {
   render() {
     return (
@@ -110,16 +89,12 @@ class App extends Component {
       <div>
       <Link to="/">Posts</Link>
       <Link to="/users">Users</Link>
+      <Link to="/lg">Login</Link>
+      <Route exact path="/" component={Post}/>
       <Route path="/users" component={Profile}/>
-      <Route path="/" component={Post}/>
+      <Route path="/lg" component={Login}/>
       </div>
       </Router>
-      {/* <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Namma Insta</h1>
-    </header> */}
-    <p className="App-intro">
-    </p>
     </div>
   );
 }
