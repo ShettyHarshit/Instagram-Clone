@@ -22,20 +22,22 @@ class Post extends Component {
     this.fetchData();
   }
   
-  fetchData = (url ="http://localhost:3001/api/posts") => {
+   fetchData = (url ="http://localhost:3001/api/posts") => {
   this.setState({loading: true})
-   return fetch(url)
-     .then(res => res.json())
-     .then(res => {
-       // this.x = res
-       var t = _.get(res, "data");
-       // var desc = _.map(t, function (o) {
-       //   return o.description
-       // })
-       this.x = t
+  return fetch(url, {
+    method: "get",
+    headers: new Headers({
+      Authorization:
+        "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjMzNDk2ODV9.SznA8_9pnYS3pjRmhe8qA-8Rq0STi1C-lApE0pjd1qM"
+    })
+  })
+    .then(res => res.json())
+    .then(res => {
+      console.log(res)
+       this.x = res
        this.setState({ loading: false });
        console.log("Tera Nahi Kata");
-       return t;
+       return res;
      })
      .catch(err => {
        this.setState({ loading: false });
