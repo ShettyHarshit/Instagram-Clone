@@ -4,10 +4,10 @@
 
 - [x] Token Based Auth
 - [x] Likes in API call
-- [ ] Seperate API for users
+- [x] Seperate API for users
 - [x] API call for current user
+- [x] Test Post CRUD over APIs
 - [ ] Merge User and Profile Models
-- [ ] Test Post CRUD over APIs
 - [ ] Test User CRUD over APIs
 - [ ] Handle images over APIs
 
