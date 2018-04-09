@@ -1,3 +1,7 @@
+body{
+  background-color: #fafafa;
+}
+
 .App {
   text-align: center;
 }
@@ -12,6 +16,14 @@
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+.general-body{
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin: 25px;
+  padding: 10px 0;
 }
 
 .insta-header {
@@ -87,6 +99,57 @@
 .w90{
   /* display: inline; */
   width: 70%;
+}
+
+.login{
+  width: 350px;
+}
+
+.blue-button{
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  outline: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 280px;
+  background: #3897f0;
+  border-color: #3897f0;
+  color: #fff;
+  margin: 10px;
+}
+
+.terms{
+  color: #999;
+  margin: 10px 60px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.txt{
+  width: 280px;
+  -webkit-box-flex: 1;
+  flex: 1 0 0px;
+  margin: 5px;
+  outline: 0;
+  overflow: hidden;
+  padding: 9px 0 7px 8px;
+  text-overflow: ellipsis;
+  background: #fafafa;
+  font-size: 14px;
+  line-height: 18px;  
+  color: #262626;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+}
+
+.or{
+  color: #262626 !important;
 }
 
 @keyframes App-logo-spin {
