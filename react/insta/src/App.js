@@ -29,21 +29,21 @@ class Post extends Component {
     method: "get",
     headers: new Headers({
       Authorization:
-        "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjMzNDk2ODV9.SznA8_9pnYS3pjRmhe8qA-8Rq0STi1C-lApE0pjd1qM"
+        "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjM0NjU2ODd9.kyEfSNhNXkWF96oTc_rNAgXRl_ggtxFvQNhBtzmW2X0"
     })
   })
     .then(res => res.json())
     .then(res => {
-      console.log(res)
-       this.x = res
-       this.setState({ loading: false });
-       console.log("Tera Nahi Kata");
-       return res;
-     })
-     .catch(err => {
-       this.setState({ loading: false });
-       console.log("Tera Kat Gaya");
-     });
+      console.log(res);
+      this.x = res;
+      this.setState({ loading: false });
+      console.log("Tera Nahi Kata");
+      return res;
+    })
+    .catch(err => {
+      this.setState({ loading: false });
+      console.log("Tera Kat Gaya");
+    });
 }
 
 render() {
