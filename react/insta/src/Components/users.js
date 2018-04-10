@@ -20,14 +20,18 @@ class Profile extends React.Component {
           "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjM0NjU2ODd9.kyEfSNhNXkWF96oTc_rNAgXRl_ggtxFvQNhBtzmW2X0"
       })
     }).then(response => response.json())
-      .then(data => console.log(data));
+      .then(data => this.setState({ bio: data.bio, username: data.username, posts: data.posts}));
   }
 
   render() {
     return <div className="general-body">
         My Profile
         <Avatar size="large" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-        <p>x followers y following z posts</p>
+        <p>
+          {this.state.posts} followers {this.state.posts} following {this.state.posts} posts
+        </p>
+        <p>{this.state.bio}</p>
+        <p>{this.state.username}</p>
       </div>;
   }
 }
