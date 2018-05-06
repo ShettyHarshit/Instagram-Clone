@@ -29,7 +29,7 @@ class Post extends Component {
     method: "get",
     headers: new Headers({
       Authorization:
-        "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjM0NjU2ODd9.kyEfSNhNXkWF96oTc_rNAgXRl_ggtxFvQNhBtzmW2X0"
+        "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjQ2NzE3MTZ9.5V4MLAkUKs9mCKYyS9DjVmNpd9Yk9BA7iCFS13R4y9o"
     })
   })
     .then(res => res.json())
