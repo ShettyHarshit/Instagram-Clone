@@ -4,7 +4,7 @@ import Profile from "./Components/users";
 import _ from 'lodash';
 import './App.css';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import Login from './Components/login';
+import Login from './Components/Login/login';
 
 // fetch("http://localhost:3000")
 //   .then(res => res.json())
