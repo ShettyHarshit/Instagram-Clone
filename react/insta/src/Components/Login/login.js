@@ -33,8 +33,16 @@ class SignUp extends React.Component {
 
 
   handleSubmit(event) {
+    const body = "{\"email\":\""+ this.state.email +"\",\"password\":\""+ this.state.pass +"\"}"
     console.log('Username: ' + this.state.email);
     console.log('Password: ' + this.state.pass);
+    fetch("http://localhost:3001/authenticate", { body: body, headers: { "Content-Type": "application/json" }, method: "POST" })
+      .then((response) => response.json())
+      .then((responseJson) => {
+        console.log(responseJson.auth_token);
+        sessionStorage.setItem('InstaAUTHTOKEN', responseJson.auth_token);
+      })
+
     event.preventDefault();
   }
   
@@ -47,9 +55,9 @@ class SignUp extends React.Component {
         onChange={this.handleChange} />
       <input type="text" value={this.state.email} onChange={this.handleChange.bind(this)} />
       <input type="password" value={this.state.pass} onChange={this.handlePass.bind(this)} />
+      <input type="submit" onClick={this.handleSubmit.bind(this)} value="Submit" />
       <TxtField label="Password" />
       <BlueButton label="Log in" />
-      <input type="submit" onClick={this.handleSubmit.bind(this)} value="Submit" />
       <p className="or">OR</p>
       <BlueButton label="Log in with Facebook" />
     </div>

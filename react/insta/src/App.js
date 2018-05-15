@@ -15,21 +15,22 @@ import Login from './Components/Login/login';
 class Post extends Component {
   constructor(props) {
     super(props);
-    this.state = { loading: true }
+    this.state = { loading: true, 
+    auth:  sessionStorage.getItem('InstaAUTHTOKEN')}
     this.x = {};
   }
   
   componentDidMount() {
     this.fetchData();
   }
-  
-   fetchData = (url ="http://localhost:3001/api/posts") => {
+  fetchData = (url ="http://localhost:3001/api/posts") => {
+    console.log(this.state.auth)
   this.setState({loading: true})
   return fetch(url, {
     method: "get",
     headers: new Headers({
       Authorization:
-        "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MjQ2NzE3MTZ9.5V4MLAkUKs9mCKYyS9DjVmNpd9Yk9BA7iCFS13R4y9o"
+        this.state.auth
     })
   })
     .then(res => res.json())
