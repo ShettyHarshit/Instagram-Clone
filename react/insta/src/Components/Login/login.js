@@ -1,22 +1,6 @@
 import React from "react";
 import "../../App.css";
 
-class BlueButton extends React.Component {
-  render() { 
-    return <button className="blue-button">
-    {this.props.label}
-    </button>
-  }
-}
-
-class TxtField extends React.Component {
-  state = {}
-  render() { 
-    return <input placeholder={this.props.label} className="txt">
-    </input>
-  }
-}
-
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
@@ -47,21 +31,20 @@ class SignUp extends React.Component {
 
     event.preventDefault();
   }
+
+  warn(){
+    alert("It's just a clone lmao chill")
+  }
   
   render() { 
     return <div>
     <div className="general-body login">
       <h1>Instagram</h1>
-      <TxtField label="User Name or Email or Mobile Number" type="text"
-        value={this.state.value}
-        onChange={this.handleChange} />
-      <input type="text" value={this.state.email} onChange={this.handleChange.bind(this)} />
-      <input type="text" value={this.state.pass} onChange={this.handlePass.bind(this)} />
-      <input type="submit" onClick={this.handleSubmit.bind(this)} value="Submit" />
-      <TxtField label="Password" />
-      <BlueButton label="Log in" />
+        <div><input placeholder="User Name or Email" className="txt" type="text" value={this.state.email} onChange={this.handleChange.bind(this)} /></div>
+        <div><input placeholder="Password" className="txt" type="text" value={this.state.pass} onChange={this.handlePass.bind(this)} /></div>     
+        <input className="blue-button" type="submit" onClick={this.handleSubmit.bind(this)} value="Log In" />
       <p className="or">OR</p>
-      <BlueButton label="Log in with Facebook" />
+          <button className="blue-button" onClick={this.warn.bind(this)}>Log In With Facebook</button>
     </div>
     <div className="general-body login">Don't have an account? Sign up</div>
     </div>;
