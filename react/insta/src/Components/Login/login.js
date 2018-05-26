@@ -41,7 +41,9 @@ class SignUp extends React.Component {
       .then((responseJson) => {
         console.log(responseJson.auth_token);
         sessionStorage.setItem('InstaAUTHTOKEN', responseJson.auth_token);
+        window.location.reload(false); 
       })
+
 
     event.preventDefault();
   }
@@ -54,7 +56,7 @@ class SignUp extends React.Component {
         value={this.state.value}
         onChange={this.handleChange} />
       <input type="text" value={this.state.email} onChange={this.handleChange.bind(this)} />
-      <input type="password" value={this.state.pass} onChange={this.handlePass.bind(this)} />
+      <input type="text" value={this.state.pass} onChange={this.handlePass.bind(this)} />
       <input type="submit" onClick={this.handleSubmit.bind(this)} value="Submit" />
       <TxtField label="Password" />
       <BlueButton label="Log in" />
