@@ -23,16 +23,17 @@ class Post extends Component {
   componentDidMount() {
     this.fetchData();
   }
+ 
   fetchData = (url ="http://localhost:3001/api/posts") => {
     console.log(this.state.auth)
-  this.setState({loading: true})
-  return fetch(url, {
-    method: "get",
-    headers: new Headers({
-      Authorization:
+    this.setState({loading: true})
+    return fetch(url, {
+      method: "get",
+      headers: new Headers({
+        Authorization:
         this.state.auth
+      })
     })
-  })
     .then(res => res.json())
     .then(res => {
       console.log(res);
@@ -45,7 +46,7 @@ class Post extends Component {
       this.setState({ loading: false });
       console.log("Tera Kat Gaya");
     });
-}
+  }
 
 render() {
   var postList = _.map(this.x, (function (post) {
@@ -82,6 +83,13 @@ render() {
 }
 
 class App extends Component {
+
+  removeSession() {
+    sessionStorage.clear();
+    console.log("Hua!");
+    window.location.reload(false);    
+  }
+
   render() {
     return (
       <div>
@@ -89,8 +97,9 @@ class App extends Component {
       <Router>
       <div>
       <Link to="/">Posts</Link>
-      <Link to="/users">Users</Link>
+      <Link to="/users">My Profile</Link>
       <Link to="/lg">Login</Link>
+      <Link to="/" onClick={this.removeSession}>Sign Out</Link>
       <Route exact path="/" component={Post}/>
       <Route path="/users" component={Profile}/>
       <Route path="/lg" component={Login}/>
